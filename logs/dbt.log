@@ -2770,3 +2770,110 @@ Traceback (most recent call last):
 dbt.exceptions.CompilationException: Compilation Error in macro generate_database_name (macros/get_custom_database.sql)
   'get_user' is undefined
 
+2021-04-16 14:39:47.988885 (MainThread): Running with dbt=0.19.1
+2021-04-16 14:39:48.363703 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.rpc.server.RPCServerTask'>, debug=False, defer=None, exclude=None, host='0.0.0.0', log_cache_events=False, log_format='default', models=None, partial_parse=True, port=8580, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='rpc', write_json=True)
+2021-04-16 14:39:48.371449 (MainThread): Tracking: tracking
+2021-04-16 14:39:48.371674 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdedb334e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded670e970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded67102b0>]}
+2021-04-16 14:39:48.372049 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=15
+2021-04-16 14:39:48.377947 (MainThread): Supported methods: ['cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'status', 'test']
+2021-04-16 14:39:48.378113 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2021-04-16 14:39:48.387229 (Thread-1): Parsing macros/get_custom_database.sql
+2021-04-16 14:39:48.392270 (Thread-1): Parsing macros/generate_schema_name.sql
+2021-04-16 14:39:48.395485 (Thread-1): Parsing macros/parse_credit_rules.sql
+2021-04-16 14:39:48.398566 (Thread-1): Parsing macros/adapters.sql
+2021-04-16 14:39:48.427185 (Thread-1): Parsing macros/catalog.sql
+2021-04-16 14:39:48.429279 (Thread-1): Parsing macros/materializations/table.sql
+2021-04-16 14:39:48.433162 (Thread-1): Parsing macros/materializations/merge.sql
+2021-04-16 14:39:48.435221 (Thread-1): Parsing macros/materializations/incremental.sql
+2021-04-16 14:39:48.444378 (Thread-1): Parsing macros/materializations/view.sql
+2021-04-16 14:39:48.446672 (Thread-1): Parsing macros/core.sql
+2021-04-16 14:39:48.450573 (Thread-1): Parsing macros/materializations/helpers.sql
+2021-04-16 14:39:48.459498 (Thread-1): Parsing macros/materializations/common/merge.sql
+2021-04-16 14:39:48.473693 (Thread-1): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-04-16 14:39:48.475609 (Thread-1): Parsing macros/materializations/snapshot/strategies.sql
+2021-04-16 14:39:48.494593 (Thread-2): handling status request
+2021-04-16 14:39:48.494984 (Thread-2): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded6653250>]}
+2021-04-16 14:39:48.495167 (Thread-1): Parsing macros/materializations/snapshot/snapshot.sql
+2021-04-16 14:39:48.495881 (Thread-2): sending response (<Response 185 bytes [200 OK]>) to 10.0.37.128
+2021-04-16 14:39:48.529345 (Thread-1): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-04-16 14:39:48.534917 (Thread-1): Parsing macros/materializations/view/view.sql
+2021-04-16 14:39:48.541377 (Thread-1): Parsing macros/materializations/seed/seed.sql
+2021-04-16 14:39:48.562665 (Thread-1): Parsing macros/materializations/table/table.sql
+2021-04-16 14:39:48.569683 (Thread-1): Parsing macros/materializations/incremental/helpers.sql
+2021-04-16 14:39:48.571786 (Thread-1): Parsing macros/materializations/incremental/incremental.sql
+2021-04-16 14:39:48.578055 (Thread-1): Parsing macros/etc/is_incremental.sql
+2021-04-16 14:39:48.579902 (Thread-1): Parsing macros/etc/query.sql
+2021-04-16 14:39:48.581134 (Thread-1): Parsing macros/etc/datetime.sql
+2021-04-16 14:39:48.590332 (Thread-1): Parsing macros/etc/get_custom_alias.sql
+2021-04-16 14:39:48.591492 (Thread-1): Parsing macros/etc/get_custom_database.sql
+2021-04-16 14:39:48.593364 (Thread-1): Parsing macros/etc/get_custom_schema.sql
+2021-04-16 14:39:48.595627 (Thread-1): Parsing macros/schema_tests/not_null.sql
+2021-04-16 14:39:48.597371 (Thread-1): Parsing macros/schema_tests/accepted_values.sql
+2021-04-16 14:39:48.600321 (Thread-1): Parsing macros/schema_tests/relationships.sql
+2021-04-16 14:39:48.602485 (Thread-1): Parsing macros/schema_tests/unique.sql
+2021-04-16 14:39:48.604497 (Thread-1): Parsing macros/adapters/common.sql
+2021-04-16 14:39:48.687566 (Thread-1): Acquiring new snowflake connection "model.folkefinans_dw.dwd_loan_account".
+2021-04-16 14:40:47.051064 (Thread-3): handling status request
+2021-04-16 14:40:47.051380 (Thread-3): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded4544910>]}
+2021-04-16 14:40:47.052227 (Thread-3): sending response (<Response 9340 bytes [200 OK]>) to 10.0.2.151
+2021-04-16 14:40:47.132789 (Thread-4): handling ps request
+2021-04-16 14:40:47.133068 (Thread-4): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded4572a60>]}
+2021-04-16 14:40:47.133549 (Thread-4): sending response (<Response 105 bytes [200 OK]>) to 10.0.44.212
+2021-04-16 14:41:26.802513 (Thread-5): handling status request
+2021-04-16 14:41:26.804467 (Thread-5): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded45726d0>]}
+2021-04-16 14:41:26.805238 (Thread-5): sending response (<Response 9340 bytes [200 OK]>) to 10.0.37.128
+2021-04-16 14:41:27.235817 (Thread-6): handling compile_sql request
+2021-04-16 14:41:27.236101 (Thread-6): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded4569ac0>]}
+2021-04-16 14:41:27.236543 (Thread-6): sending response (<Response 605 bytes [200 OK]>) to 10.0.26.37
+2021-04-16 14:47:58.139624 (Thread-7): handling ps request
+2021-04-16 14:47:58.139968 (Thread-7): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded457cac0>]}
+2021-04-16 14:47:58.140477 (Thread-7): sending response (<Response 105 bytes [200 OK]>) to 10.0.37.187
+2021-04-16 14:47:58.141621 (Thread-8): handling status request
+2021-04-16 14:47:58.141832 (Thread-8): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded452af10>]}
+2021-04-16 14:47:58.142541 (Thread-8): sending response (<Response 9340 bytes [200 OK]>) to 10.0.9.82
+2021-04-16 14:49:17.813017 (MainThread): Connection 'model.folkefinans_dw.dwd_loan_account' was properly closed.
+2021-04-16 14:49:17.834186 (Thread-9): Parsing macros/get_custom_database.sql
+2021-04-16 14:49:17.838363 (Thread-9): Parsing macros/generate_schema_name.sql
+2021-04-16 14:49:17.841771 (Thread-9): Parsing macros/parse_credit_rules.sql
+2021-04-16 14:49:17.844817 (Thread-9): Parsing macros/adapters.sql
+2021-04-16 14:49:17.873387 (Thread-9): Parsing macros/catalog.sql
+2021-04-16 14:49:17.875551 (Thread-9): Parsing macros/materializations/table.sql
+2021-04-16 14:49:17.879592 (Thread-9): Parsing macros/materializations/merge.sql
+2021-04-16 14:49:17.881705 (Thread-9): Parsing macros/materializations/incremental.sql
+2021-04-16 14:49:17.891043 (Thread-9): Parsing macros/materializations/view.sql
+2021-04-16 14:49:17.893413 (Thread-9): Parsing macros/core.sql
+2021-04-16 14:49:17.897644 (Thread-9): Parsing macros/materializations/helpers.sql
+2021-04-16 14:49:17.907231 (Thread-9): Parsing macros/materializations/common/merge.sql
+2021-04-16 14:49:17.924848 (Thread-9): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-04-16 14:49:17.928300 (Thread-9): Parsing macros/materializations/snapshot/strategies.sql
+2021-04-16 14:49:17.948945 (Thread-9): Parsing macros/materializations/snapshot/snapshot.sql
+2021-04-16 14:49:17.984484 (Thread-9): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-04-16 14:49:17.993624 (Thread-9): Parsing macros/materializations/view/view.sql
+2021-04-16 14:49:18.004226 (Thread-9): Parsing macros/materializations/seed/seed.sql
+2021-04-16 14:49:18.043069 (Thread-9): Parsing macros/materializations/table/table.sql
+2021-04-16 14:49:18.055369 (Thread-9): Parsing macros/materializations/incremental/helpers.sql
+2021-04-16 14:49:18.059041 (Thread-9): Parsing macros/materializations/incremental/incremental.sql
+2021-04-16 14:49:18.067514 (Thread-9): Parsing macros/etc/is_incremental.sql
+2021-04-16 14:49:18.070700 (Thread-9): Parsing macros/etc/query.sql
+2021-04-16 14:49:18.072872 (Thread-9): Parsing macros/etc/datetime.sql
+2021-04-16 14:49:18.089525 (Thread-9): Parsing macros/etc/get_custom_alias.sql
+2021-04-16 14:49:18.095083 (Thread-9): Parsing macros/etc/get_custom_database.sql
+2021-04-16 14:49:18.097655 (Thread-9): Parsing macros/etc/get_custom_schema.sql
+2021-04-16 14:49:18.099750 (Thread-9): Parsing macros/schema_tests/not_null.sql
+2021-04-16 14:49:18.101450 (Thread-9): Parsing macros/schema_tests/accepted_values.sql
+2021-04-16 14:49:18.104570 (Thread-9): Parsing macros/schema_tests/relationships.sql
+2021-04-16 14:49:18.106774 (Thread-9): Parsing macros/schema_tests/unique.sql
+2021-04-16 14:49:18.108663 (Thread-9): Parsing macros/adapters/common.sql
+2021-04-16 14:49:18.194120 (Thread-9): Acquiring new snowflake connection "model.folkefinans_dw.dwd_loan_account".
+2021-04-16 14:49:18.208990 (Thread-9): Acquiring new snowflake connection "model.folkefinans_dw.stg_current_loan_account".
+2021-04-16 14:49:18.216461 (Thread-9): Acquiring new snowflake connection "model.folkefinans_dw.base_loan_account".
+2021-04-16 14:49:18.235838 (Thread-10): handling status request
+2021-04-16 14:49:18.236127 (Thread-10): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded43e8880>]}
+2021-04-16 14:49:18.236818 (Thread-10): sending response (<Response 185 bytes [200 OK]>) to 10.0.9.82
+2021-04-16 14:49:18.423293 (Thread-9): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded420a6d0>]}
+2021-04-16 14:49:19.628629 (Thread-11): handling status request
+2021-04-16 14:49:19.628913 (Thread-11): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded43f8d00>]}
+2021-04-16 14:49:19.629704 (Thread-11): sending response (<Response 10258 bytes [200 OK]>) to 10.0.17.76
+2021-04-16 14:49:39.035619 (Thread-12): handling status request
+2021-04-16 14:49:39.035957 (Thread-12): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0b14ad9a-cde6-4676-b8f4-6515baf3a676', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fded670e310>]}
+2021-04-16 14:49:39.036796 (Thread-12): sending response (<Response 10258 bytes [200 OK]>) to 10.0.27.72

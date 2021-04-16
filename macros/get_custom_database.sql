@@ -12,7 +12,7 @@
 
       {%- else -%}
 
-        {{ env_var('DBT_USER') }}_{{ target.name }}_{{ target.database }}
+        dbt_{{ target.name }}_{{ target.database }}
 
       {%- endif -%}
     {%- endif -%}
