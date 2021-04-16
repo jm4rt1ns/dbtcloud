@@ -1,0 +1,103 @@
+
+version: 2
+
+
+models:
+    - name: base_loan_account
+      description: "Loan Account data with renamed and typed fields. Contains all cumulative changes for all accounts as fetched from Mambu API."
+      columns:
+        - name: loan_account_id
+          description: "The id of the loan"
+          tests:
+              - unique
+              - not_null
+        - name: loan_name
+          description: "The name of the loan account"
+        - name: loan_amount
+          description: "The loan amount"
+        - name: payment_method
+          description: "The payment method. Represents the interest payment
+                        method that determines whether the payments are made
+                        Horizontally (on the Repayments) or Vertically (on the
+                        Loan Account)"
+        - name: account_holder_key
+          description: "The unique id of the customer/client (a.k.a account holder)"
+        - name: account_holder_type
+          description: "The type of the account holder (i.e CLIENT)"
+        - name: account_state
+          description: "The state of the loan account"
+        - name: account_sub_state
+          description: "This field holds a second state for the account. Beside the account state, we might need to
+                        hold sometimes a different information to actually represent the correct life-cycle step in
+                        which the account is at that moment. The account behaves as the main state implies, but it
+                        can have either some limitations either some extra behavior rules. For example, even if the
+                        account is Active, it can also be Locked in the same time which implies some limitations
+                        over the actions which can be performed with the account"
+        - name: created_ts
+          description: "The name of the loan account"
+        - name: approved_ts
+          description: "The timestamp the loan account was approved"
+        - name: closed_ts
+          description: "The date the loan was closed"
+        - name: disbursement_ts
+          description: "The activation timestamp, the date when the disbursement actually took place"
+        - name: first_repayment_ts
+          description: "The date of the expected first repayment. Stored as timestamp"
+        - name: application_type
+          description: "The application type, \"New\" or \"Limit increase\""
+        - name: previous_application_id
+          description: "The loan_account_id of the previous application"
+        - name: original_application_id
+          description: "The loan_account_id of the original application"
+        - name: ap_data_processing_consent
+          description: "Data processing consent flag"
+        - name: initial_application_amount
+          description: "The credit limit amount requested on the first application submitted by the customer"
+        - name: ap_ip_address
+          description: "The IP address which originated the application"
+        - name: ap_monthly_living_cost
+          description: "The customer's monthly living costs amount declared on the loan application"
+        - name: ap_monthly_net_income
+          description: "The customer's monthly net income amount declared on the loan application"
+        - name: ap_pep_acceptance
+          description: "The PEP acceptance flag on loan application"
+        - name: ap_terms_acceptance
+          description: "The terms acceptance flag on loan application"
+        - name: ap_wealth
+          description: "Estimated total value of all customer assets (i.e: apartment + vacations house + cars + boat)"
+        - name: arvato_account_id
+          description: "The Arvato Account ID to which the loan account is linked to"
+        - name: bisnode_rgs_pd
+          description: "Bisnode Risk Guardian Suite probability of default"
+        - name: bisnode_rgs_score
+          description: "Bisnode Risk Guardian Suite score"
+        - name: cr_affordability
+          description: "Credit Rule reflecting the customer's ability to pay back the loan. Approved/Rejected or N/A when not applicable"
+        - name: cr_arvato_credit
+          description: "Credit Rule reflecting Arvato's credit assessment of the customer. Approved/Rejected or N/A when not applicable"
+        - name: cr_arvato_limit_increase
+          description: "Credit Rule reflecting Arvato's decision on increasing the credit limit. Approved/Rejected or N/A when not applicable"
+        - name: cr_bisnode_aml_pep
+          description: "Credit Rule PEP and sanction list check. When customer has filled in her/his input into the application questionnaire
+                        and hit the apply now button we will call Bisnode to check if SSN is registered or related to some SSN on global PEP
+                        and sanction lists provided by UN, EU and HM Treasury"
+        - name: cr_bisnode_rgs_decision
+          description: "Credit Rule"
+        - name: cr_blocked_customer
+          description: "Credit Rule"
+        - name: cr_credit_assessment
+          description: "Credit Rule"
+        - name: cr_credit_check
+          description: "Credit Rule"
+        - name: cr_customer_age
+          description: "Credit Rule"
+        - name: cr_customer_debt
+          description: "Credit Rule"
+        - name: cr_customer_info_change
+          description: "Credit Rule"
+        - name: cr_loan_multi_exposure
+          description: "Credit Rule"
+        - name: cr_money_laundering
+          description: "Credit Rule"
+        - name: last_modified_ts
+          description: "The timestamp when the loan account was last modified/updated"
